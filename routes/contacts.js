@@ -1,3 +1,6 @@
+// This code sets up routes for our app. Each route tells the app what to do when it receives certain requests. 
+// It guides requests to the right place.
+
 // Import the necessary modules
 const router = require("express").Router();
 const contactsController = require("../controllers/contacts");

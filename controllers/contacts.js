@@ -1,3 +1,5 @@
+// These functions help handle contact-related requests, making sure you see the right information.
+
 // Import the required modules
 const mongodb = require("../data/database");
 const ObjectId = require("mongodb").ObjectId;

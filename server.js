@@ -1,3 +1,6 @@
+// This code sets up our app, picks a port for the server, connects different routes, 
+// and gets the database ready to use.
+
 // Import necessary modules
 const express = require("express");
 const mongodb = require("./data/database");
