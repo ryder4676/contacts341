@@ -12,5 +12,13 @@ router.get("/", contactsController.getAll);
 // This route responds to GET requests with an 'id' parameter and invokes the 'getSingle' function from the 'contactsController'
 router.get("/:id", contactsController.getSingle);
 
+// This route responds to POST requests to create a new contact
+router.post("/", contactsController.createContact);
+
+router.put("/:id", contactsController.updateContact)
+
+router.delete("/:id", contactsController.deleteContact)
+
+
 // Export the router to be used in other parts of your application
 module.exports = router;

@@ -4,6 +4,7 @@
 // Import necessary modules
 const express = require("express");
 const mongodb = require("./data/database");
+const BodyParser = require("body-parser");
 
 // Create an instance of the Express application
 const app = express();
@@ -13,6 +14,10 @@ const port = process.env.PORT || 8080;
 
 // Use the routes defined in "./routes" for the root path
 app.use("/", require("./routes"));
+// Import the 'body-parser' module to handle HTTP request bodies.
+app.use(BodyParser.json());
+// Use 'body-parser' middleware to parse URL-encoded request bodies with extended options.
+app.use(BodyParser.urlencoded({ extended: true }));
 
 // Initialize the database and start the Express server
 mongodb.initDb((err) => {
