@@ -12,5 +12,7 @@ router.get("/", (req, res) => {
 // Use the "/contacts" route defined in the "contacts" module
 router.use("/contacts", require("./contacts"));
 
+router.use("/", require("./swagger"));
+
 // Export the router to be used by other parts of your application
 module.exports = router;

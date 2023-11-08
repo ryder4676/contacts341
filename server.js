@@ -11,11 +11,11 @@ const app = express();
 
 // Define the port number, using process.env.PORT if available or 8080 as a default
 const port = process.env.PORT || 8080;
-
-// Use the routes defined in "./routes" for the root path
-app.use("/", require("./routes"));
 // Import the 'body-parser' module to handle HTTP request bodies.
 app.use(BodyParser.json());
+// Use the routes defined in "./routes" for the root path
+app.use("/", require("./routes"));
+
 // Use 'body-parser' middleware to parse URL-encoded request bodies with extended options.
 app.use(BodyParser.urlencoded({ extended: true }));
 
