@@ -5,7 +5,7 @@
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "https://render4676.onrender.com",
+  "host": "render4676.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
