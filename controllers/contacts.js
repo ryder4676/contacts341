@@ -36,7 +36,7 @@ const createContact = async (req, res)=>{
                 };
     const result = await mongodb.getDatabase().db("professionalData").collection("contacts").insertOne(user);
     if (result.acknowledged){
-        res.status(204).send("Successfully Created");
+        res.status(204).json({ message: "Successfully created user" });
     }else{
         res.status(500).json({error:"Some error occured updating the user"});
       }
@@ -52,7 +52,7 @@ const updateContact = async (req, res)=>{
                 };
     const result = await mongodb.getDatabase().db("professionalData").collection("contacts").replaceOne({ _id: userId }, user);
     if (result.modifiedCount > 0){
-        res.status(204).send("Successfully updated user");
+        res.status(204).json({ message: "Successfully updated user" });
     }else{
         res.status(500).json({error:"Some error occured updating the user"});
       }
@@ -63,7 +63,7 @@ const deleteContact = async (req, res) =>{
     const userId = new ObjectId(req.params.id);
     const result = await mongodb.getDatabase().db("professionalData").collection("contacts").deleteOne({_id: userId});
         if (result.deletedCount > 0){
-            res.status(204).send("Successfully deleted user");
+            res.status(204).json({ message: "Successfully deleted user" });
         }else{
             res.status(500).json({error:"Some error occured updating the user"});
         }
