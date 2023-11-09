@@ -10,9 +10,9 @@ Content-Type: application/json
 {
     "firstName": "Allison",
     "lastName": "Ronald",
-    "email": "cuteadorableblondy4676@gmail.com",
-    "favoriteColor": "GReed",
-    "birthday": "04/24/2008"
+    "email": "cuteblondy4676@gmail.com",
+    "favoriteColor": "Purple",
+    "birthday": "04/24/2089"
 }
 
 ### Update a existing Contact
@@ -21,10 +21,10 @@ Content-Type: application/json
 
 {
     "firstName": "Jayson",
-    "lastName": "McDonald",
-    "email": "ryder4676@gmail.com",
-    "favoriteColor": "Orange",
-    "birthday": "1985-01-08"
+    "lastName": "McRonald",
+    "email": "ronaldronald@gmail.com",
+    "favoriteColor": "White",
+    "birthday": "2085-01-08"
 }
 ### Delete a existing contact
 DELETE https://render4676.onrender.com/contacts/654c189e5aa14cf1b79f34a1
